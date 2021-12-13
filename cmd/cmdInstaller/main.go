@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	err := lib.Install("postgresql postgresql-contrib")
+	config := lib.LoadConfig("postgres")
+	err := lib.Install(config.PackageList...)
 	if err != nil {
 		fmt.Errorf("Installer failed: %s", err.Error())
 		os.Exit(1)

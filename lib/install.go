@@ -2,6 +2,7 @@ package lib
 
 import (
 	"os/exec"
+	"strings"
 )
 
 type System int
@@ -19,11 +20,12 @@ func InstallCommand(system System) string {
 }
 
 // Install install package
-func Install(packName string) error {
+func Install(packNames ...string) error {
 	installTool := InstallCommand(
 		System(GetSystemEnum()),
 	)
 
+	packName := strings.Join(packNames, " ")
 	cmd := exec.Cmd{Args: []string{installTool, "install -y", packName}}
 	err := cmd.Run()
 	return err
