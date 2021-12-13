@@ -1,3 +1,3 @@
 # Installer
 
-Go library of Linux install.
+Go library for Linux package install.
