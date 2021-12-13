@@ -1,4 +1,4 @@
 Name = "postgres"
-PackageList = "postgresql postgresql-contrib"
+PackageList = ["postgresql", "postgresql-contrib"]
 Username = "postgres"
 Password = "??"
