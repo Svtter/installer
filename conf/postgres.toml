@@ -1,0 +1,4 @@
+Name = "postgres"
+PackageList = "postgresql postgresql-contrib"
+Username = "postgres"
+Password = "??"
