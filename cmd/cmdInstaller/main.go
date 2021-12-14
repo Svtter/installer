@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	config := lib.LoadConfig("postgres")
+	config := lib.LoadConfig("./postgres.toml")
 	err := lib.Install(config.PackageList...)
 	if err != nil {
 		fmt.Errorf("Installer failed: %s", err.Error())
